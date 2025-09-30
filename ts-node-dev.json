@@ -1,0 +1,13 @@
+{
+  "respawn": true,
+  "transpileOnly": true,
+  "ignore": [
+    "node_modules/**/*",
+    "build/**/*",
+    "dist/**/*",
+    "*.test.ts",
+    "*.spec.ts"
+  ],
+  "watch": ["src/**/*"],
+  "ext": "ts,js,json"
+}

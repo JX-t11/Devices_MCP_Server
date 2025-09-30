@@ -1,0 +1,60 @@
+{
+  "name": "mcp_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "mcp_server": "./build/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "start:prod": "node dist/index.js",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules -r tsconfig-paths/register src/index.ts",
+    "dev:watch": "nodemon --exec ts-node -r tsconfig-paths/register src/index.ts --watch src --ext ts,js",
+    "dev:debug": "ts-node-dev --respawn --transpile-only --inspect --ignore-watch node_modules -r tsconfig-paths/register src/index.ts"
+  },
+  "files": [
+    "build"
+  ],
+  "keywords": [],
+  "author": "JX-t11",
+  "license": "Apache-2.0",
+  "description": "",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.1",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "ioredis": "^5.7.0",
+    "iplocation": "^7.2.0",
+    "md5": "^2.3.0",
+    "mqtt": "^5.14.0",
+    "mysql2": "^3.14.3",
+    "reflect-metadata": "^0.2.2",
+    "request-ip": "^3.3.0",
+    "typeorm": "^0.3.25",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/ioredis": "^5.0.0",
+    "@types/md5": "^2.3.5",
+    "@types/mqtt": "^2.5.0",
+    "@types/node": "^24.0.4",
+    "@types/request-ip": "^0.0.41",
+    "eslint": "^9.29.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "nodemon": "^3.1.9",
+    "prettier": "^3.6.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
+  }
+}
